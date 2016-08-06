@@ -1,0 +1,110 @@
+#detail {
+font-family: "Microsoft YaHei";
+  .banner{
+   position: relative ;
+    .iSlider-wrapper {
+      height: 165px;
+    }
+  }
+
+  .islider-dot-wrap {
+    top: 145px;
+  }
+  .theCar{
+    display: -webkit-box;
+    padding:10px;
+    border-bottom:1px solid #e5e5e5;
+
+    .truck{
+      -webkit-box-flex:1;
+      p{
+        font-size:1.5rem;
+        color:#333333;
+      }
+      .price{
+        font-size:1.2rem;
+        color:#333333;
+        padding-top: 10px;
+        span{
+          margin-left:5px;
+          font-size:2rem;
+          color:#ff8d0a;
+        }
+        del{
+          margin-left:5px;
+          color:#999999;
+        }
+      }
+    }
+
+  }
+  .loan{
+    .loan-d{
+      padding:14px 0 10px 0;
+      .s-img{
+        width:2px;
+        height:15px;
+        float:left;
+        background-color: #ff8d0a;
+      }
+      P{
+        font-size:1.3rem;
+        color:#333333;
+        margin-left:8px;
+      }
+    }
+    .img{
+      height:166px;
+      margin:0 10px;
+      background: url("../../../static/images/car.png")no-repeat;
+      background-size:cover;
+    }
+  }
+  .shop-data{
+      .loan-d{
+        padding:14px 0 10px 0;
+        .s-img{
+          width:2px;
+          height:15px;
+          float:left;
+          background-color: #ff8d0a;
+        }
+        P{
+          font-size:1.3rem;
+          color:#333333;
+          margin-left:8px;
+        }
+      }
+      .img{
+        img {
+          width: 100%;
+          height: 262px;
+        }
+      }
+    .short{
+
+      img{
+        width: 100%;
+        height:62px;
+      }
+    }
+  }
+  .order{
+    height:50px;
+    a{
+      display: block;
+      height:36px;
+      margin: 7px 10px;
+      line-height: 36px;
+      text-align: center;
+      font-size: 2rem;
+      color:#ffffff;
+      background-color: #ff8a16;
+      border:1px solid #e5e5e5;
+      border-radius:3px;
+    }
+
+  }
+
+}
+

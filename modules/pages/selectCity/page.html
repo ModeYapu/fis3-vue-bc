@@ -1,0 +1,5 @@
+<div id="selectCity">
+    <ul>
+        <li v-for="city in cityList">{{city.name}} <input type="radio" @click="select(city)" v-model="cityCode" value="{{city.code}}" name="selectCity"></li>
+    </ul>
+</div>

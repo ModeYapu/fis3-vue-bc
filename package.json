@@ -1,0 +1,31 @@
+{
+  "name": "fis3_vue_tpl",
+  "version": "1.0.0",
+  "description": "基于vue的前端模块化项目模板",
+  "main": "app.js",
+  "scripts": {
+    "serverStart": "fis3 server start "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BQ-Team/fis3_vue_tpl.git"
+  },
+  "keywords": [
+    "vue",
+    "fis3"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BQ-Team/fis3_vue_tpl/issues"
+  },
+  "homepage": "https://github.com/BQ-Team/fis3_vue_tpl#readme",
+  "dependencies": {
+    "director": "^1.2.8",
+    "islider.js": "^2.1.7",
+    "requirejs": "^2.2.0",
+    "seajs": "^3.0.2",
+    "vue": "^1.0.26",
+    "zepto": "^1.2.0"
+  }
+}

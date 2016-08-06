@@ -1,0 +1,36 @@
+<div id="booking">
+    <div class="tip">
+        <p>请填写以下资料，客服将在2个工作日与您联系</p>
+    </div>
+    <div class="order-plan">
+        <p>购车计划</p>
+    </div>
+    <div class="place">
+        <div class="where"><p>何地购买</p></div>
+        <div class="select">
+            <p>上海</p>
+            <a @click="">
+
+            </a>
+        </div>
+    </div>
+    <div class="time">
+        <div class="when"><p>何时购买</p></div>
+        <div class="select-time" @click="selectime">
+            <p>{{selectT|selectTimeFormat}}</p>
+            <a >
+            </a>
+        </div>
+    </div>
+    <div class="contact"><p>联系方式</p></div>
+    <div class="call">
+        <div class="tel">手机号</div>
+        <div class="number"><p>15811688888</p></div>
+    </div>
+    <div class="others">
+        <p>如您预算不足，我们还提供贷款服务，详询客服</p>
+    </div>
+    <div class="Submit-immediately">
+        <a href="#/pages/Submit-successfully">立即提交</a>
+    </div>
+</div>

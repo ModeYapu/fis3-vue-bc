@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title123</title>
+    <meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="static/css/comm.css">
+</head>
+<body>
+<!--<c-header></c-header>-->
+<div id="main">
+    <!--主体-->
+    <component :is="currentView" keep-alive>
+    </component>
+
+    <!--弹框-->
+    <div id="dialogBox" v-if="currentDialogView">
+        <div class="dialogContent" :class="dialogPositionClass">
+            <component :is="currentDialogView" keep-alive>
+            </component>
+        </div>
+    </div>
+</div>
+<script src="static/js/sea.js"></script>
+<script>
+    seajs.use("./app");
+</script>
+</body>
+</html>

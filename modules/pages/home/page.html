@@ -1,0 +1,35 @@
+<div id="home">
+    <div class="select">
+        <ul class="sele-t">
+            <li v-for="(index,item) in searchData" @click="showSearchContent(item,index)">
+                <span>{{item.title}}</span><a></a>
+                <div class="content-box"  v-show="searchShowIndex==index">
+                    <div class="content">
+                        <ul class="content-v">
+                            <li v-for="tag in item.items" @click.stop="selectSearchTag(item,tag)">{{tag}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <ul>
+        <li class="List" v-for="item in list">
+            <div class="imgTip">
+                <div class="tip">
+                </div>
+            </div>
+            <div class="theCar">
+                <div class="truck">
+                    <p>{{item.motorcycleType}}</p>
+                    <p class="price">特价<span>￥{{item.price}}</span>
+                        <del>市场价￥{{item.marketPrice}}</del>
+                    </p>
+                </div>
+                <div class="buyNow">
+                    <a href="" @click="showMsg">立即购买</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

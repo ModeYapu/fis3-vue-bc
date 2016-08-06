@@ -1,0 +1,30 @@
+#whenToBuy{
+  font-family: "Microsoft YaHei";
+  background-color: #f5f5f5;
+  .select{
+    height:20px;
+    padding:10px;
+    display: -webkit-box;
+    background-color: #ffffff;
+    border-bottom:1px solid #ededed;
+    p{
+      -webkit-box-flex:1;
+      font-size:1.5rem;
+      color:#333333;
+      line-height:20px;
+    }
+    .ti{
+      color:#ff8d0a;
+    }
+    .img{
+      -webkit-box-flex:1;
+      .active{
+        display: block;
+        float: right;
+        height:15px;
+        width:20px;
+        background: url("../../../static/images/Selected.png")no-repeat;
+      }
+    }
+  }
+}

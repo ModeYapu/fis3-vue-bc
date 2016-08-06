@@ -1,0 +1,8 @@
+<duv id="whenToBuy">
+    <div class="select" v-for="(key, name) in selectTime" @click="select(key)">
+         <p :class="{ti:selectT==key}">{{name}}</p>
+        <div class="img">
+            <i :class="{active:selectT==key}"></i>
+        </div>
+    </div>
+</duv>

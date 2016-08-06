@@ -1,0 +1,144 @@
+#home {
+  font-family:"Microsoft YaHei" ;
+  .select{
+    height:33px;
+    width:100%;
+    .sele-t{
+      display: -webkit-box;
+      text-align:center ;
+      padding-top: 7px;
+      li{
+        -webkit-box-flex:1;
+        height:16px;
+        border-left:1px solid #e5e5e5;
+        display: -webkit-box;
+        span{
+          -webkit-box-flex:1;
+          font-size:1.4rem;
+          color:#333333;
+          margin-left: 20px;
+        }
+        a{
+          -webkit-box-flex:1;
+          display: block ;
+          float: right;
+          height:6px;
+          width:10px;
+          margin-left: 5px;
+          margin-top: 7px;
+          background: url("../../../static/images/detail.png")no-repeat;
+          background-size:cover;
+        }
+        .content-box{
+          position: absolute;
+          left: 0;
+          top: 33px;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          .content{
+            padding:0 10px 30px 10px;
+            border-top:1px solid #e5e5e5;
+            background-color: #ffffff;
+            .content-v {
+              display: block;
+              width: 100%;
+              li {
+                float: left;
+                display: block;
+                margin-right:10px;
+                margin-top: 15px;
+                height: 28px;
+                width:calc(100%/3 - 10px);
+                border: 1px solid #e5e5e5;
+                line-height: 28px;
+                border-radius: 3px;
+                font-size:1.3rem;
+                color:#333333;
+                text-align: center;
+              }
+              li:nth-child(1){
+                margin-right: 200px;
+              }
+              li:nth-child(3n+4){
+                margin-right: 0;
+              }
+              .active{
+                color:#fd9125;
+                background-color:#fce4cf;
+              }
+            }
+          }
+          .content:after {
+            clear:both;
+            content:'.';
+            display:block;
+            width: 0;
+            height: 0;
+            visibility:hidden;
+          }
+        }
+      }
+    }
+  }
+  ul{
+    .List{
+      .imgTip{
+        height:159px;
+        width:100%;
+        background:url("../../../static/images/icon-1.jpg")no-repeat;
+        .tip{
+          height:47px;
+          width:47px;
+          float:left;
+          margin-top:10px;
+          margin-left:10px;
+          background:url("../../../static/images/Sale-icon.png")no-repeat;
+          background-size:cover;
+        }
+      }
+      .theCar{
+        display: -webkit-box;
+        padding:10px;
+        border-bottom:1px solid #e5e5e5;
+
+        .truck{
+          -webkit-box-flex:1;
+          p{
+            font-size:1.5rem;
+            color:#333333;
+          }
+          .price{
+            font-size:1.2rem;
+            color:#333333;
+            padding-top: 10px;
+            span{
+              margin-left:5px;
+              font-size:2rem;
+              color:#ff8d0a;
+            }
+            del{
+              margin-left:5px;
+              color:#999999;
+            }
+          }
+        }
+        .buyNow{
+          width:75px;
+          a{
+            display: block ;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+            width:75px;
+            margin-top:9px;
+            border-radius:3px;
+            background-color: #ff8d0a;
+            color:#ffffff;
+            font-size:1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
