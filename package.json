@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BQ-Team/fis3_vue_tpl.git"
+    "url": "git+https://github.com/BQ-Team/fis3_vue_bc.git"
   },
   "keywords": [
     "vue",
@@ -17,9 +17,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BQ-Team/fis3_vue_tpl/issues"
+    "url": "https://github.com/BQ-Team/fis3_vue_bc/issues"
   },
-  "homepage": "https://github.com/BQ-Team/fis3_vue_tpl#readme",
+  "homepage": "https://github.com/BQ-Team/fis3_vue_bc#readme",
   "dependencies": {
     "director": "^1.2.8",
     "islider.js": "^2.1.7",
