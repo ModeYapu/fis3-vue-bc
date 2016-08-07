@@ -40,6 +40,9 @@ define(function (require, exports, module) {
                         self.selectT = newKey;
                     }
                 }, "top");
+            },
+            selectCity:function(){
+                this.showPage("pages/selectCity","11")
             }
         }
     });
