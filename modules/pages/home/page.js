@@ -73,9 +73,9 @@ define(function (require, exports, module) {
                     }
                 });
             },
-            showMsg: function (item, index, e) {
+            showMsg: function () {
                // item.id = index;
-                this.showPage("pages/detail", item);
+                this.showPage("pages/detail", '1230');
                 //this.selectIndex = index;
             },
             showSearchContent: function (item, index) {

@@ -24,7 +24,6 @@
     "director": "^1.2.8",
     "islider.js": "^2.1.7",
     "requirejs": "^2.2.0",
-    "seajs": "^3.0.2",
     "vue": "^1.0.26",
     "zepto": "^1.2.0"
   }
