@@ -5,7 +5,6 @@
 define(function (require, exports, module) {
     var util = require("util");
     var basePage = require("basePage");
-    var store = require("store");
     module.exports = Vue.extend({
         mixins: [basePage],
         title: "首页",
@@ -14,7 +13,6 @@ define(function (require, exports, module) {
             return {
                 list: {},
                 selectIndex: -1,
-                brandSelect: store.brandSelect,
                 searchShowIndex: -1,
                 searchData: [
                     {
@@ -43,7 +41,8 @@ define(function (require, exports, module) {
                     brand:"",
                     dongli:"",
                     province:""
-                }
+                },
+                currentSearchTag:""
             }
         },
         ready: function () {
@@ -82,13 +81,19 @@ define(function (require, exports, module) {
                 if (this.searchShowIndex == index) {
                     this.searchShowIndex = -1;
                 } else {
-                    this.searchShowIndex = index
+                    this.searchShowIndex = index;
+                    this.currentSearchTag =  this.search[item.id];
                 }
             },
             selectSearchTag: function (item, tag) {
-                this.searchShowIndex = -1;
+                var self = this;
                 this.search[item.id] = tag;
-                this.searchList();
+                this.currentSearchTag = tag;
+                setTimeout(function(){
+                    self.searchShowIndex = -1;
+                    self.searchList();
+                },500);
+
             }
 
         }

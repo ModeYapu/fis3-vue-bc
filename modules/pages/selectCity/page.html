@@ -1,5 +1,15 @@
 <div id="selectCity">
-    <ul>
-        <li v-for="city in cityList">{{city.name}} <input type="radio" @click="select(city)" v-model="cityCode" value="{{city.code}}" name="selectCity"></li>
-    </ul>
+    <div class="select">
+        <ul>
+            <li v-for="(index,item) in cityData" @click="showCityContent(item,index)" :class="{active-p:item.titel==index}" >
+                <span class="province">{{item.title}}</span>
+                <div class="city"  v-show="cityShowIndex==index">
+                    <ul class="city-e">
+                        <li v-for="tag in item.items" @click.stop="selectCityTag(item,tag)"
+                            :class="{active:tag==currentCityTag}">{{tag}} <i :class="{img:tag==currentCityTag}"></i></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
