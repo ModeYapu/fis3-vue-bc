@@ -5,13 +5,15 @@
 define(function (require, exports, module) {
     var util = require("util");
     var basePage = require("basePage");
+
     module.exports = Vue.extend({
         mixins: [basePage],
         title: "选择城市",
         template: __inline("./page.html"),
         data: function () {
             return {
-                cityData:[
+
+               /* cityData:[
                     {
                         id:"shanghai",
                         title:"上海",
@@ -64,7 +66,7 @@ define(function (require, exports, module) {
                         title:"山东",
                         items:["济南","松江","闵行","徐汇","徐汇","徐汇","徐汇","徐汇","徐汇","徐汇","徐汇","徐汇",]
                     }
-                ],
+                ],*/
                 cityShowIndex:1,
                 search:{
                     shanghai:"",
@@ -94,20 +96,8 @@ define(function (require, exports, module) {
             searchList:function(){
                 var self = this;
                 util.ajaxRequest({
-                    url: "",
-                    data: {
-                        page: 1,
-                        shanghai:self.search.shanghai,
-                        beijing:self.search.beijing,
-                        jiangsu:self.search.jiangsu,
-                        hubei:self.search.hubei,
-                        hunan:self.search.hunan,
-                        sichuan:self.search.sichuan,
-                        yunnan:self.search.yunnan,
-                        guangdong:self.search.guangdong,
-                        anhuei:self.search.anhuei,
-                        shandong:self.search.shandong
-                    },
+                    dataType:"json",
+                    url: "data.area.json",
                     success: function (d) {
                         self.list = d.data;
                     }
