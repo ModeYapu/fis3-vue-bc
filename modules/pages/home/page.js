@@ -12,7 +12,7 @@ define(function (require, exports, module) {
         data: function () {
             return {
                 list: {},
-                selectIndex: -1,
+               /* selectIndex: -1,*/
                 searchShowIndex: -1,
                 searchData: [
                     {
@@ -88,6 +88,7 @@ define(function (require, exports, module) {
             selectSearchTag: function (item, tag) {
                 var self = this;
                 this.search[item.id] = tag;
+
                 this.currentSearchTag = tag;
                 setTimeout(function(){
                     self.searchShowIndex = -1;
