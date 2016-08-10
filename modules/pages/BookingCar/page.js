@@ -14,7 +14,7 @@ define(function (require, exports, module) {
             return {
                 selectT:1,
                 item:{},
-                cityCode:0
+                cityCode:310100
             }
         },
         filters: {

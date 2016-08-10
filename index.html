@@ -17,7 +17,7 @@
     </component>
 
     <!--弹框-->
-    <div id="dialogBox" v-if="currentDialogView">
+    <div id="dialogBox" v-show="currentDialogView">
         <div class="dialogContent" :class="dialogPositionClass">
             <component :is="currentDialogView" keep-alive>
             </component>
