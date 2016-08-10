@@ -8,6 +8,7 @@
     left: 0;
     height: 100%;
     width: 50%;
+    overflow-y: auto;
   }
   .cityBox {
     position: absolute;
@@ -15,7 +16,7 @@
     height: 100%;
     width: 50%;
     background-color: #f5f5f5;
-
+    overflow-y: auto;
   }
   .pActive {
     background-color: #f5f5f5;

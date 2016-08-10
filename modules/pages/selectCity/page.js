@@ -33,20 +33,22 @@ define(function (require, exports, module) {
         methods: {
             defaultSelect: function () {
                 var self = this;
+                var flag = 0;
                 if (self.provinceList && self.provinceList.length) {
                     var pcode = self.cityCode.substring(0, 2) + "0000";
-                    for (var i = 0; i < self.provinceList.length; i++) {
-                        var pitem = self.provinceList[i];
-                        if (pcode == pitem.code){
-                            self.provinceIndex = i;
-                            for (var j = 0; j < pitem.city.length; j++) {
-                                if (pitem.city[j].code == self.cityCode) {
-                                    self.cityIndex = j;
-                                    break;
+                    eachFilter:
+                        for (var i = 0; i < self.provinceList.length; i++) {
+                            var pitem = self.provinceList[i];
+                            if (pcode == pitem.code) {
+                                self.provinceIndex = i;
+                                for (var j = 0; j < pitem.city.length; j++) {
+                                    if (pitem.city[j].code == self.cityCode) {
+                                        self.cityIndex = j;
+                                        break eachFilter;
+                                    }
                                 }
                             }
                         }
-                    }
                 }
             }
             ,

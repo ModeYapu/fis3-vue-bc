@@ -36,13 +36,13 @@ define(function (require, exports, module) {
                         items: ["广东", "上海", "北京", "天津", "河北", "河南", "江苏", "湖北", "湖南", "安徽", "杭州", "山东", "甘肃", "山西", "内蒙古", "西藏"]
                     }
                 ],
-                search:{
-                    carType:"",
-                    brand:"",
-                    dongli:"",
-                    province:""
+                search: {
+                    carType: "",
+                    brand: "",
+                    dongli: "",
+                    province: ""
                 },
-                currentSearchTag:""
+                currentSearchTag: ""
             }
         },
         ready: function () {
@@ -56,16 +56,16 @@ define(function (require, exports, module) {
 
         },
         methods: {
-            searchList:function(){
+            searchList: function () {
                 var self = this;
                 util.ajaxRequest({
                     url: "car/carList",
                     data: {
                         page: 1,
-                        carType:self.search.carType,
-                        brand:self.search.brand,
-                        dongli:self.search.dongli,
-                        province:self.search.province
+                        carType: self.search.carType,
+                        brand: self.search.brand,
+                        dongli: self.search.dongli,
+                        province: self.search.province
                     },
                     success: function (d) {
                         self.list = d.data;
@@ -73,7 +73,7 @@ define(function (require, exports, module) {
                 });
             },
             showMsg: function () {
-               // item.id = index;
+                // item.id = index;
                 this.showPage("pages/detail", '1230');
                 //this.selectIndex = index;
             },
@@ -82,7 +82,7 @@ define(function (require, exports, module) {
                     this.searchShowIndex = -1;
                 } else {
                     this.searchShowIndex = index;
-                    this.currentSearchTag =  this.search[item.id];
+                    this.currentSearchTag = this.search[item.id];
                 }
             },
             selectSearchTag: function (item, tag) {
@@ -90,10 +90,11 @@ define(function (require, exports, module) {
                 this.search[item.id] = tag;
 
                 this.currentSearchTag = tag;
-                setTimeout(function(){
+                item.title = tag;
+                setTimeout(function () {
                     self.searchShowIndex = -1;
                     self.searchList();
-                },500);
+                }, 500);
             }
         }
     });

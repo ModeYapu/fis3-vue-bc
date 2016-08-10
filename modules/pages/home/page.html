@@ -2,10 +2,12 @@
     <div class="select">
         <ul class="sele-t">
             <li v-for="(index,item) in searchData" @click="showSearchContent(item,index)">
-                <span>{{item.title}}</span><a></a>
+                <span  :class="{rootActive:searchShowIndex==index}">{{item.title}}</span><a></a>
                 <div class="content-box"  v-show="searchShowIndex==index">
                     <div class="content">
                         <ul class="content-v">
+                            <li @click.stop="selectSearchTag(item,'全部')"
+                                :class="{active:'全部'==currentSearchTag}">全部</li>
                             <li v-for="tag in item.items" @click.stop="selectSearchTag(item,tag)"
                                 :class="{active:tag==currentSearchTag}">{{tag}}</li>
                         </ul>

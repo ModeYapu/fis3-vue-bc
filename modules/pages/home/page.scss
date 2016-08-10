@@ -3,6 +3,9 @@
   .select{
     height:33px;
     width:100%;
+    .rootActive{
+      color:#fd9125 !important;
+    }
     .sele-t{
       display: -webkit-box;
       text-align:center ;
