@@ -12,9 +12,9 @@ define(function (require, exports, module) {
         template: __inline("./page.html"),
         data: function () {
             return {
-                list: [],
                 selectT:1,
-                item:{}
+                item:{},
+                cityCode:0
             }
         },
         filters: {
@@ -42,7 +42,13 @@ define(function (require, exports, module) {
                 }, "top");
             },
             selectCity:function(){
-                this.showPage("pages/selectCity","11")
+                var self = this;
+                this.showDialog("pages/selectCity", {
+                    cityCode:self.cityCode,
+                    ok:function(newKey){
+                        self.cityCode = newKey;
+                    }
+                }, "top");
             }
         }
     });

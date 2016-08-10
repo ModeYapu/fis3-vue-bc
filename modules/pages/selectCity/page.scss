@@ -1,53 +1,33 @@
-#selectCity{
-  font-family: "Microsoft YaHei";
-  .select{
-   ul{
-     li{
-       height:40px;
-       background-color: #ffffff;
-       line-height: 40px;
-       span{
-         margin-left: 15px;
-         color:#333333;
-        font-size:1.3rem;
-       }
-       .city{
-         display: block ;
-         width: 160px;
-         position: absolute ;
-         top:0;
-         right:0;
-         background-color:#f5f5f5;
-         .city-e{
-           float: right ;
-           width:144px;
-           li{
-             background-color:#f5f5f5;
-             padding-left:4px;
-             border-bottom:1px solid #dddddd;
-             height: 39px;
-             .img{
-               display: block;
-               float: right;
-               margin-top: 13px;
-               margin-left: 10px;
-               height:15px;
-               width:20px;
-               background: url("../../../static/images/Selected.png")no-repeat;
-             }
-           }
-           .active{
-             color:#fd9125;
-           }
+#selectCity {
+  height: 100%;
+  li {
+    padding: 10px;
+  }
+  .provinceBox {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 50%;
+  }
+  .cityBox {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #f5f5f5;
 
-         }
-       }
-     }
-     .active{
-       background-color: #f5f5f5;
-     }
-   }
- }
-
-
+  }
+  .pActive {
+    background-color: #f5f5f5;
+  }
+  .cActive {
+    color: #fd9125;
+  }
+  .active {
+    display: block;
+    float: right;
+    height: 15px;
+    width: 20px;
+    background: url("../../../static/images/Selected.png") no-repeat;
+  }
 }

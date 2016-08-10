@@ -4,20 +4,22 @@
 
 define(function (require, exports, module) {
     var util = require("util");
-    var basePage = require("basePage");
-
+    var baseDialogPage = require("baseDialogPage");
     module.exports = Vue.extend({
-        mixins: [basePage],
+        mixins: [baseDialogPage],
         title: "选择城市",
         template: __inline("./page.html"),
         data: function () {
             return {
-                cityShowIndex:1,
-                currentCityTag:""
+                provinceList: [],//所有省数据
+                provinceIndex: 0,//当前选择省的索引
+                cityIndex: -1//当前选择城市的索引
             }
         },
         ready: function () {
             var self = this;
+            var areaData = util.city.getAreaJsonData();
+            self.provinceList = areaData.china.province;
         },
         attached: function () {
 
@@ -26,28 +28,16 @@ define(function (require, exports, module) {
 
         },
         methods: {
-            searchList:function(){
-                var self = this;
-                util.ajaxRequest({
-                    dataType:"json",
-                    url: "data.area.json",
-                    success: function (d) {
-                        self.list = d.data;
-                    }
-                });
+            selectProvince: function (index) {
+                this.provinceIndex = index;
             },
-            showCityContent: function (item, index) {
-                if (this.cityShowIndex == index) {
-                    this.cityShowIndex = -1;
-                } else {
-                    this.cityShowIndex = index;
-                    this.currentCityTag =  this.search[item.id];
-                }
-            },
-            selectCityTag:function(item,tag){
+            selectCity: function (index, city) {
                 var self = this;
-                this.search[item.id] = tag;
-                this.currentCityTag = tag;
+                self.cityIndex = index;
+                setTimeout(function () {
+                    self.hideDialog();
+                    self.params.ok(city.code);
+                }, 300);
             }
         }
     });

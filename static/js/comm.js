@@ -117,6 +117,42 @@ define(function (require, exports, module) {
                     $.isFunction(opts.error) && opts.error(xhr, exception);
                 }
             });
+        },
+        //省市区数据
+        city: {
+            _jsonData: undefined,
+            _xmlData: undefined,
+            getAreaJsonData: function () {
+                var self = this;
+                if (self._jsonData) {
+                    return self._jsonData;
+                }
+                $.ajax({
+                    url: "static/data/area.json",
+                    dataType: "json",
+                    async: false,
+                    success: function (data) {
+                        self._jsonData = data;
+                    }
+                });
+                return self._jsonData;
+            },
+            getAreaXmlData: function () {
+                var self = this;
+                if (self._xmlData) {
+                    return self._xmlData;
+                }
+                $.ajax({
+                    url: "static/data/area.xml",
+                    dataType: "xml",
+                    async: false,
+                    success: function (data) {
+                        self._xmlData = $(data);
+                    }
+                });
+                return self._xmlData;
+            }
+
         }
 
     };

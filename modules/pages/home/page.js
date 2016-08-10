@@ -12,7 +12,7 @@ define(function (require, exports, module) {
         data: function () {
             return {
                 list: {},
-               /* selectIndex: -1,*/
+                selectIndex: -1,
                 searchShowIndex: -1,
                 searchData: [
                     {
@@ -94,9 +94,7 @@ define(function (require, exports, module) {
                     self.searchShowIndex = -1;
                     self.searchList();
                 },500);
-
             }
-
         }
     });
 });

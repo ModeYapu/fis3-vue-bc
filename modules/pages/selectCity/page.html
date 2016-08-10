@@ -1,15 +1,14 @@
 <div id="selectCity">
-    <div class="select">
-        <ul>
-            <li v-for="(index,item) in cityData" @click="showCityContent(item,index)" :class="{active-p:item.titel==index}" >
-                <span class="province">{{item.title}}</span>
-                <div class="city"  v-show="cityShowIndex==index">
-                    <ul class="city-e">
-                        <li v-for="tag in item.items" @click.stop="selectCityTag(item,tag)"
-                            :class="{active:tag==currentCityTag}">{{tag}} <i :class="{img:tag==currentCityTag}"></i></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
+    <ul class="provinceBox">
+        <li v-for="province in provinceList" @click="selectProvince($index)"
+            :class="{pActive:$index==provinceIndex}">
+            {{province.name}}
+        </li>
+    </ul>
+    <ul class="cityBox">
+        <li v-for="city in provinceList[provinceIndex].city" @click="selectCity($index,city)"
+            :class="{cActive:$index==cityIndex}">
+            {{city.name}}<i :class="{active:$index==cityIndex}"></i>
+        </li>
+    </ul>
 </div>
